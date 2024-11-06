@@ -5,6 +5,13 @@ My not-so-impressive collection of dotfiles. Currently this only includes my `.z
 
 My neovim config is primarily stored elsewhere in my [nvim repo](https://github.com/Jstone751/nvim)
 
+# Automatic Install:
+
+```shell
+cd ~ && git clone https://github.com/Jstone751/dotfiles.git && cd dotfiles && ./autoinstall.sh
+```
+Tada! For the nvim and brewfile functions you will need to have nvim and brew installed. Nvim is included in the brewfile, so really you only need homebrew, at [brew.sh](https://brew.sh).
+
 # Manual Install
 
 For those who do not blindly run an autoinstall script, good for you, here are the steps:
