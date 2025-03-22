@@ -1,6 +1,5 @@
 tap "felixkratz/formulae"
 tap "homebrew/command-not-found"
-tap "homebrew/services"
 tap "jandedobbeleer/oh-my-posh"
 tap "jstkdng/programs"
 tap "koekeishiya/formulae"
