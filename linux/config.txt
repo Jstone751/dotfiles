@@ -1,0 +1,49 @@
+font-family = "MesloLGS NF"
+font-family = "Monaspace Argon"
+font-feature = "+liga"
+theme = "catppuccin-macchiato"
+background-opacity = 0.7
+background-blur-radius = 10
+
+# quick terminal
+keybind = global:cmd+`=toggle_quick_terminal
+keybind = cmd+l=clear_screen
+keybind = cmd+t=new_tab
+keybind = cmd+s=toggle_secure_input
+
+# show/hide windows
+keybind = global:ctrl+grave_accent=toggle_visibility
+keybind = cmd+shift+left=adjust_selection:beginning_of_line
+keybind = cmd+shift+right=adjust_selection:end_of_line
+
+#new splits
+keybind = opt+tab=next_tab
+keybind = opt+shift+tab=previous_tab
+keybind = ctrl+slash>up=new_split:up
+keybind = ctrl+slash>down=new_split:down
+keybind = ctrl+slash>left=new_split:left
+keybind = ctrl+slash>right=new_split:right
+
+# resize splits
+keybind = opt+shift+up=resize_split:up,10
+keybind = opt+shift+down=resize_split:down,10
+keybind = opt+shift+left=resize_split:left,10
+keybind = opt+shift+right=resize_split:right,10
+
+keybind = opt+up=resize_split:up,1
+keybind = opt+down=resize_split:down,1
+keybind = opt+left=resize_split:left,1
+keybind = opt+right=resize_split:right,1
+
+keybind = opt+z=toggle_split_zoom
+
+quick-terminal-position = top
+shell-integration = zsh
+macos-titlebar-style = tabs
+window-save-state = always
+clipboard-read = allow
+clipboard-write = allow
+macos-icon = custom-style
+macos-icon-frame = chrome
+desktop-notifications = true
+font-size = 14
