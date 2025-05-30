@@ -1,0 +1,255 @@
+nvim
+rustup update
+echo "hi 1 2 3 let" | nu-highlight 
+carapace
+ls
+rm \\
+rm \
+ls
+wpd
+pwd
+ls
+paru
+$env.EDITOR = "nvim"
+config nu
+cd .config/nushell/
+ls
+head env.nu
+nvim env.nu
+cd ~/projects/
+gh repo clone simsrw73/poshcat.omp
+cd poshcat.omp/
+ls
+nvim catpow.omp.json
+config env
+config nu
+exit
+whoami
+ok
+echo hi
+nvim catpow.omp.json
+cd projects/poshcat.omp/
+code catpow.omp.json
+code-insiders catpow.omp.json
+echo hi\
+echo hi \
+echo $PS2
+echo $env.PS2
+echo "looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" \ 
+exit
+echo hi
+cd projects/
+cd physics/
+ls
+cd ..
+cd poshcat.omp/
+code catpow.omp.json\
+code catpow.omp.json
+code-insiders catpow.omp.json
+exit
+cd projects/physics/
+exit
+cd projects/physics/
+ls
+ls -a
+git init
+exit
+cd projects/physics/
+cd ..
+ls
+cd ghostty/
+ls
+ls -a
+exit
+cd projects/physics/
+cd ..
+cd exercism/go/annalyns-infiltration/
+cd ..
+cd ghostty/
+cd ..
+exit
+sleep 2
+sleep 2ms
+sleep 3sec
+exit
+sleep 3sec
+echo ok
+exit
+sleep 3sec
+echo hi
+echo
+hi
+echo hi
+config env
+exit
+config env
+exit
+config env
+config nu
+exit
+cd
+cd dow
+cd
+config nu
+config env
+config nu
+exit
+nvim .zshrc
+config env
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)
+cd
+exit
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)
+nvcc
+cat /etc/profile
+ls /etc/profile.d/
+cat /etc/profile.d/cuda.sh
+cat /etc/profile.d/jre.sh
+exit
+config nu
+nvim .zshrc
+pwd
+mv .zshrc.bak .zshrc
+nvim .zshrc
+fd
+cd /etc/profile.d/
+ls
+fd -x cat
+config nu
+exit
+help
+help path add
+help path
+use std "path add"
+path add --help
+cd /opt/cuda
+ls
+config nu
+exit
+nvc
+nvcc
+nvidia-smi
+exit
+nvidia-smi
+nvcc
+paru
+cat /etc/os-release 
+cd /boot
+ls
+cd grub
+ls
+cd ..
+cd efi
+sudo -i
+cd
+ls
+cd Downloads/
+ls | where (type == file)
+ls | where type == file
+ls | where type == dir
+ls
+mkdir ddcci-files
+ls | where type == file | sort-by name
+ls | where type == file | sort-by name | where name =~ "ddcci"
+ls | where type == file | sort-by name | where name =~ "ddcci" | select name
+ls | where type == file | sort-by name | where name =~ "ddcci" | select name | flatten
+ls | where type == file | sort-by name | where name =~ "ddcci" | select name | describe
+ls | where type == file | sort-by name | where name =~ "ddcci" | get name
+ls | where type == file | sort-by name | where name =~ "ddcci" | get name | describe
+ls | where type == file | sort-by name | where name =~ "ddcci" | get name | each {|x| mv x ddci/}
+ls | where type == file | sort-by name | where name =~ "ddcci" | get name | each {|x| mv $x ddci/}
+ls
+ls | where type == file | sort-by name | where name =~ "ddcci" | get name | each {|x| mv $x ddcci-files/}
+ls | where type == file | sort-by name
+ls | where type == file | sort-by name | where name =~ "nvidia" | get name | each {|x| mv $x ddcci-files/}
+ls | where type == file | sort-by name
+cd ddcci-files/
+ls
+jj init
+jj git init
+jj git remote -v
+jj git remote
+jj git remote add origin "https://github.com/Jstone751/ddcci-files.git"
+jj git fetch
+ls
+jj git pull
+git pull
+rm .jj
+rm -rf .jj
+git init
+git remotee add origin "https://github.com/Jstone751/ddcci-files"
+git remote add origin "https://github.com/Jstone751/ddcci-files"
+git pull
+ls
+git add *
+git remove *
+git
+git reset *
+ls
+git commit -m --allow-empty "init"
+git commit --allow-empty -m "init"
+git push
+git push -u origin  main
+git pull
+git pull -u origin main
+git pull --set-upstream origin main
+git config pull.rebase true
+git pull --set-upstream origin main
+git push
+git add *
+git commit -m "intial files"
+git push
+cd ..
+rm -rf ddcci-files/
+ls
+http get "https://random-word-api.vercel.app/api?words=10"
+http get "https://random-word-api.vercel.app/api?words=10" | sort-by length
+http get "https://random-word-api.vercel.app/api?words=10" | sort
+http get "https://random-word-api.vercel.app/api?words=10" | sort-by -c {|i| length}
+http get "https://random-word-api.vercel.app/api?words=10" | sort-by -c {|i| length} --reversed
+http get "https://random-word-api.vercel.app/api?words=10" | sort-by -c {|i| length} --reverse
+length
+3 | length
+length --help
+http get "https://random-word-api.vercel.app/api?words=10" | sort-by -c {|i| $i | length} --reverse
+http get "https://random-word-api.vercel.app/api?words=10" | sort
+$myvar = []
+var
+var = []
+mut var = []
+const data = http get 'https://random-word-api.vercel.app/api?words=10'
+let data = http get 'https://random-word-api.vercel.app/api?words=10'
+$data
+paru
+brew upgrade
+brew update
+paru
+brew update
+brew info execline
+brew upgrade
+zoxide completions
+zoxide completion
+zoxide --help
+zi
+z
+exit
+paru
+spicetify backup apply
+spicetify apply
+spotify
+which spotifyu
+which spotify
+cd /opt
+ls
+sudo chmod a+wr /opt/spotify<\n>sudo chmod a+wr /opt/spotify/Apps -R
+exit
+brew upgrade
+brew cleanup --prune=all
+paru -Scc
+cargo install cargo-install-update
+cargo install-update
+cargo install cargo-update
+cargo-install-update
+cargo install-update
+cargo install-update --all --git
+paru -S zotero

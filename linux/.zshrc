@@ -4,11 +4,11 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CONFIG_DIR="$HOME/.config"
+#export XDG_CONFIG_HOME="$HOME/.config"
+#export XDG_CONFIG_DIR="$HOME/.config"
 
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+ source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -33,7 +33,7 @@ setopt promptsubst         # enable command substitution in prompt
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 
 # hide EOL sign ('%')
-PROMPT_EOL_MARK=""
+#PROMPT_EOL_MARK=""
 
 #export ZSH="$HOME/.oh-my-zsh"
 #source $ZSH/oh-my-zsh.sh
@@ -53,20 +53,20 @@ bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + tab undo last action
 
 # enable completion features
-# zstyle ':completion:*:*:*:*:*' menu select
-# zstyle ':completion:*' auto-description 'specify: %d'
-# zstyle ':completion:*' completer _expand _complete
-# zstyle ':completion:*' format 'Completing %d'
-# zstyle ':completion:*' group-name ''
-# zstyle ':completion:*' list-colors ''
-# zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-# zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
-# zstyle ':completion:*' rehash true
-# zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-# zstyle ':completion:*' use-compctl false
-# zstyle ':completion:*' verbose true
-# zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-#
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' rehash true
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
 # History configurations
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -75,7 +75,7 @@ setopt hist_expire_dups_first # delete duplicates first when HISTFILE size excee
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
-#setopt share_history         # share command history data
+setopt share_history         # share command history data
 
 # force zsh to show the complete history
 alias history="history 0"
@@ -92,13 +92,13 @@ TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 #fi
 
 # If this is an xterm set the title to user@host:dir
-# case "$TERM" in
-# xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty)
-#     TERM_TITLE=$'\e]0;${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%n@%m: %~\a'
-#     ;;
-# *)
-#     ;;
-# esac
+case "$TERM" in
+xterm*|rxvt*|Eterm|aterm|kterm|gnome*|alacritty)
+    TERM_TITLE=$'\e]0;${debian_chroot:+($debian_chroot)}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))}%n@%m: %~\a'
+    ;;
+*)
+    ;;
+esac
 
 # enable color support of ls, less and man, and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -137,7 +137,7 @@ alias l='ls -CF'
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -173,13 +173,13 @@ alias cd="z"
 #. "$HOME/.cargo/env"
 alias ls="eza -a"
 
-# ~/.zshrc
+# # ~/.zshrc
 export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense' # optional
 zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
 source <(carapace _carapace)
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# export PATH="/home/linuxbrew/.linuxbrew/opt/rustup/bin:$PATH"
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+export PATH="/home/linuxbrew/.linuxbrew/opt/rustup/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -191,18 +191,32 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-export MVK_CONFIG_FAST_MATH_ENABLED=0
+#export MVK_CONFIG_FAST_MATH_ENABLED=0
+
+export PATH="/usr/bin:/usr/local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/home/josh/.cargo/bin:$PATH"
-export RUSTC_WRAPPER=sccache
+[[ ! -f ~/.cargo/bin/sccache ]] || export RUSTC_WRAPPER=sccache
 alias ls="eza --color=always --icons=always --all --all -a"
 PATH=~/.console-ninja/.bin:$PATH
 export PATH="~/.local/bin:$PATH"
 eval "$(mise activate zsh)"
 alias obs="obsidian-cli"
-export XDG_DATA_DIRS="/home/linuxbrew/.linuxbrew/share:$XDG_DATA_DIRS"
 eval "$(fzf --zsh)"
+source /etc/profile
 source $HOMEBREW_PREFIX/share/powerlevel10k/powerlevel10k.zsh-theme
 source $HOMEBREW_PREFIX/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+function showall {
+  pids=" $(pidof $1) "
+  wmctrl -lp | while read id a pid b
+  do test "${pids/ $pid }" != "$pids" && wmctrl -i -a $id; done
+}
+alias restore_hyprland="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
+
+eval $(atuin init zsh)
+alias code="code-insiders"
+export PATH="$HOME/go/bin:$PATH"export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
